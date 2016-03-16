@@ -29,11 +29,30 @@
       </div>
     </nav>
 
-    <div class="container site-wrapper"></div>
+    <div class="container site-wrapper">
+      <script id="news-template" type="text/template">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="{{link}}" target="_blank">
+              <img src="{{image}}"></a>
+              <div class="caption">
+                <a href="{{link}}" target="_blank">
+                  <h3 class="text-center">{{headline}}</h3>
+                </a>
+                <div class="bottom-info">
+                  <p class="text-left post-info">by <a href="http://www.freecodecamp.com/{{username}}" target="_blank">{{username}}</a> on {{timePosted}} </p>
+                  <p class="text-right rank"><span class="glyphicon glyphicon-heart"></span> {{rank}} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </script>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/mustache.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
